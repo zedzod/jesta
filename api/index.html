@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>final project-jesta</title>
+    <link href=assets/style.css rel=stylesheet>
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  </head>
+  <body>
+      
+    <header>
+      <h1>final project-jesta</h1>
+      <ul>
+        <a href="https://github.com/zedzod/jesta"><li>Github.com</li></a>
+        <a href="https://github.com/zedzod/jesta/archive/master.zip"><li>Download .zip</li></a>
+      </ul>
+    </header>
+    <div id="main-container">
+      <main>
+        <h1>JESTA API</h1>
+       
+        <div class="request">
+          <h3>getAllTasks:  [GET]</h3>
+          <a href="https://jesta.herokuapp.com/getAllTasks">
+            https://jesta.herokuapp.com/getAllTasks</a>
+          <h4>Headers:</h4>
+          <p>
+            <span class="indent"></span>Debug - getAllTasks func was reached
+          </p>
+          <h4>JSON Response Example:</h4>
+          <div class="json">
+            
+            {
+            Invited: ["balia","ziad","mahmod","juli"],
+            _id: "5b18310bfb6fc067891ce217",
+            "id": 1,
+            userName: "ziad",
+            Mission: "pick saba",
+            Description: "take saba to hospital",
+            Date: "23/3/2019",
+            Time: "15:30",
+            Points: 10
+            },
+            {
+            Invited: ["balia","ziad","mahmod","juli"],
+            _id: "5b183139fb6fc067891ce245",
+            "id": 2,
+            userName: "ziad",
+            Mission: "Bring delivery",
+            Description: "take delivary from isreal post",
+            Date: "23/3/2019",
+            Time: "16:00",
+            Points: 7
+            },
+            {
+            Invited: ["alex","koko","fabian","ramos","ronaldo"],
+            _id: "5b1cf0aafb6fc033f880c8b3",
+            "id": 3,
+            userName: "ziad",
+            Mission: "birthday",
+            Description: "to bring a cake",
+            Date: "17/7/2018",
+            Time: "19:00",
+            Points: 7
+            },
+            {
+            Invited: ["bale","ziad","marcelo","natcho","messi"],
+            _id: "5b1cf289fb6fc033f880c925",
+            "id": 4,
+            userName: "balia",
+            Mission: "take care on my dog",
+            Description: "can you take my dog for three hour",
+            Date: "17/2/2019",
+            Time: "08:00",
+            Points: 10
+            },
+            {
+            Invited: ["nidal","adham","majd","yehia"],
+            _id: "5b1cf4e5fb6fc033f880c992",
+            "id": 5,
+            userName: "balia",
+            Mission: "homework solve",
+            Description: "solve my homework",
+            Date: "21/6/2018",
+            Time: "06:00",
+            Points: 30
+            }
+            
+          </div>
+        </div>
+
+
+        <div class="request">
+            <h3>getAllUsers:  [GET]</h3>
+            <a href="https://jesta.herokuapp.com/getAllUsers">
+              https://jesta.herokuapp.com/getAllUsers</a>
+            <h4>Headers:</h4>
+            <p>
+              <span class="indent"></span>'Debug', 'getAllUsers func was reached'
+            </p>
+            <h4>JSON Response Example:</h4>
+            <div class="json">
+              
+                {
+                _id: "5b2213dae7179a589281aa14",
+                name: "balia",
+                performTasks: "",
+                createdTasks: "",
+                points: 0,
+                rank: "C"
+                },
+                {
+                _id: "5b2213b0e7179a589281aa0d",
+                name: "ziad",
+                performTasks: "",
+                createdTasks: "",
+                points: 17,
+                rank: "C"
+                }
+            </div>
+          </div>
+
+
+          <div class="request">
+            <h3>getMissionByID/:id  [GET] [POST]</h3>
+            <a href="https://jesta.herokuapp.com/getMissionByID/1">
+              https://jesta.herokuapp.com/getMissionByID/1</a>
+            <h4>Headers:</h4>
+            <p>
+              <span class="indent"></span>'Debug', 'getMissionByID func was reached'
+            </p>
+            <h4>JSON Response Example:</h4>
+            <div class="json">
+              
+                {
+                    Invited: ["balia","ziad","mahmod","juli"],
+                    _id: "5b18310bfb6fc067891ce217",
+                    id: 1,
+                    userName: "ziad",
+                    Mission: "pick saba",
+                    Description: "take saba to hospital",
+                    Date: "23/3/2019",
+                    Time: "15:30",
+                    Points: 10
+                }
+            </div>
+          </div>
+
+
+          <div class="request">
+            <h3>search/:id/:Mission  [GET]</h3>
+            <a href="https://jesta.herokuapp.com/search/1/pick saba">
+              https://jesta.herokuapp.com/search/1/pick saba</a>
+            <h4>Headers:</h4>
+            <p>
+              <span class="indent"></span>'Debug', 'search with id and mission name'
+            </p>
+            <h4>JSON Response Example:</h4>
+            <div class="json">
+              
+                {
+                    Invited: ["balia","ziad","mahmod","juli"],
+                    _id: "5b18310bfb6fc067891ce217",
+                    id: 1,
+                    userName: "ziad",
+                    Mission: "pick saba",
+                    Description: "take saba to hospital",
+                    Date: "23/3/2019",
+                    Time: "15:30",
+                    Points: 10
+                }
+            </div>
+          </div>
+
+          
+          <div class="request">
+            <h3>searchByPointsRange/:point1/:point2  [GET]</h3>
+            <a href="https://jesta.herokuapp.com/searchByPointsRange/6/20">
+              https://jesta.herokuapp.com/searchByPointsRange/6/20</a>
+            <h4>Headers:</h4>
+            <p>
+              <span class="indent"></span>'Debug', 'search by points range'
+            </p>
+            <h4>JSON Response Example:</h4>
+            <h4>route- searchByPointsRange/6/20</h4>
+            <div class="json">
+                {
+                    Invited: ["balia","ziad","mahmod","juli"],
+                    _id: "5b18310bfb6fc067891ce217",
+                    id: 1,
+                    userName: "ziad",
+                    Mission: "pick saba",
+                    Description: "take saba to hospital",
+                    Date: "23/3/2019",
+                    Time: "15:30",
+                    Points: 10
+                    },
+                    {
+                    Invited: ["balia","ziad","mahmod","juli"],
+                    _id: "5b183139fb6fc067891ce245",
+                    id: 2,
+                    userName: "ziad",
+                    Mission: "Bring delivery",
+                    Description: "take delivary from isreal post",
+                    Date: "23/3/2019",
+                    Time: "16:00",
+                    Points: 7
+                    },
+                    {
+                    Invited: ["alex","koko","fabian","ramos","ronaldo"],
+                    _id: "5b1cf0aafb6fc033f880c8b3",
+                    id: 3,
+                    userName: "ziad",
+                    Mission: "birthday",
+                    Description: "to bring a cake",
+                    Date: "17/7/2018",
+                    Time: "19:00",
+                    Points: 7
+                    },
+                    {
+                    Invited: ["bale","ziad","marcelo","natcho","messi"],
+                    _id: "5b1cf289fb6fc033f880c925",
+                    id: 4,
+                    userName: "balia",
+                    Mission: "take care on my dog",
+                    Description: "can you take my dog for three hour",
+                    Date: "17/2/2019",
+                    Time: "08:00",
+                    Points: 10
+                    }
+            </div>
+          </div>
+          <br>
+
+
+          
+          <div class="request">
+            <h3>takeMission/:userName/:missionName/:point  [GET]</h3>
+            <a href="https://jesta.herokuapp.com/takeMission/ziad/homework/10">
+              https://jesta.herokuapp.com/takeMission/ziad/homework/10</a>
+            <h4>JSON Response Example:</h4>
+            <h4>route to take mission</h4>
+            <div class="json">
+                {
+                    _id: "5b2213b0e7179a589281aa0d",
+                    name: "ziad",
+                    performTasks: "homework",
+                    createdTasks: "",
+                    points: 10,
+                    rank: "C"
+                    }
+            </div>
+          </div>
+          <br>
+
+          <h4>disconnect route example:</h4>
+
+          <div class="json"> /disconnectFromMlab -ROUTE to disconnect from database </div>
+
+          <h4>if the route dosnot existing:</h4>
+          <div class="json">
+            {
+            	"error": "Request route did not match any option!"
+            }
+          </div>
+          
+            <h4>crud- add, update, and delete route</h4>
+        <div class="json">  /add - [POST] to add new mission with postman </div>
+        <br>
+        <div class="json">  :id/update - [PUT] to update an existing mission with postman</div>
+        <br>
+        <div class="json">  :id/delete - [DELETE] to delete an existing mission with postman</div>
+        
+        </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

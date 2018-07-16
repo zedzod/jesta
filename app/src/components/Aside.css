@@ -1,0 +1,15 @@
+.mainAside{
+
+    width: 20% ;
+    height: 300px;
+    float: left;
+}
+
+.navAside{
+
+    display: block;
+    margin-left: 10px;
+    padding-top: 10px;
+    
+    
+}

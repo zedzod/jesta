@@ -1,0 +1,9 @@
+.profile{
+
+    background-image: url('./mes.JPG');
+    border-radius: 180px;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
